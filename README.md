@@ -1,6 +1,6 @@
 # Fluent Conditions
 
-The goal of this library, isn't to replace good design, but to make bad design easier to read. In a well designed system, the need for nested if-statements is rare.
+Fluent Condition is a library designed to simplify nested if-statements. In many systems nested if-statements are the honey-pot of defects. The logic can be difficult to follow, debug and change. Fluent Conditions aims to help reduce the pain by providing a fluent syntax that helps express the requirements in a readable syntax. Well designed systems don't have a need for many nested if-statements, our goal isn't to replace well designed system, but to make bad design eaiser to read.
 
 
 
@@ -56,6 +56,17 @@ Conditions.
   	.Success(() => repository.Update(row))
   	.Failure(() => errors.Add(new ErrorResult("The status is not a valid value for rowId " + row.RowId)));
 ```
+
+
+
+## API
+
+| Methods     | Description                                                  |
+| ----------- | ------------------------------------------------------------ |
+| .When()     | is a static method, is called once, takes a `Func<bool>`, returns a new `Conditions` instance. |
+| .Run()      | is a static method, takes an `Action`, returns a new `Conditions` instance. |
+| .ThenWhen() | is an instance method and can be called as many times as needed. This method takes a single in parameter: `Func<bool>`. Once the condition is in a failure state, subsequent .ThenWhen() calls are ignored. |
+| .Success    | is an instance method and can be called as many times as needed. This method takes a single in parameter: `Func<bool>`. `.Success()` executes as long as the condition is in a true state. As soon as `.When()` or `.ThenWhen()` enters a failure state (i.e. a condition evaluating to false) `.Success()` is no longer executed. |
 
 
 
