@@ -1,6 +1,14 @@
 # Fluent Conditions
 
-Fluent Condition is a library designed to simplify nested if-statements. In many systems nested if-statements are the honey-pot of defects. The logic can be difficult to follow, debug and change. Fluent Conditions aims to help reduce the pain by providing a fluent syntax that helps express the requirements in a readable syntax. Well designed systems don't have a need for many nested if-statements, our goal isn't to replace well designed system, but to make bad design eaiser to read.
+Fluent Condition is designed to simplify nested if-statements.
+
+
+
+In many systems nested if-statements are a honey-pot of defects and logic can be difficult to follow, debug or change. Fluent Conditions aims to help reduce the pain by providing a fluent syntax that helps express requirements in a readable syntax. 
+
+
+
+Well designed systems don't have many nested if-statements, our goal isn't to replace well designed system, but to make poorly designed systems eaiser to read.
 
 
 
@@ -65,8 +73,10 @@ Conditions.
 | ----------- | ------------------------------------------------------------ |
 | .When()     | is a static method, is called once, takes a `Func<bool>`, returns a new `Conditions` instance. |
 | .Run()      | is a static method, takes an `Action`, returns a new `Conditions` instance. |
-| .ThenWhen() | is an instance method and can be called as many times as needed. This method takes a single in parameter: `Func<bool>`. Once the condition is in a failure state, subsequent .ThenWhen() calls are ignored. |
-| .Success    | is an instance method and can be called as many times as needed. This method takes a single in parameter: `Func<bool>`. `.Success()` executes as long as the condition is in a true state. As soon as `.When()` or `.ThenWhen()` enters a failure state (i.e. a condition evaluating to false) `.Success()` is no longer executed. |
+| .ThenWhen() | is an instance method and can be chained many times as needed. This method takes a single in parameter: `Func<bool>`. Once the condition is in a failure state, subsequent .ThenWhen() calls are ignored. |
+| .Success()  | is an instance method and can be called as many times as needed. This method takes a single in parameter: `Action`. `.Success()` executes as long as the condition is in a true state. As soon as `.When()` or `.ThenWhen()` enters a failure state (i.e. a condition evaluating to `false`) `.Success()` is no longer executed. |
+| .Failure()  | is an instance method. This method takes a single in parameter: `Action`. **It is run once**, right after a failed (an evaluation of `false`) `.ThenWhen()` or `.When()`. |
+| .Always()   | is an instance method. This method takes a single in parameter: `Action`. `.Always()` executes regardless of the state (`true` or `false`) of the evaluations. It can be chained indefinitely. |
 
 
 
