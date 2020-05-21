@@ -4,7 +4,7 @@ Fluent Condition is designed to simplify nested if-statements.
 
 
 
-In many systems nested if-statements are a honey-pot of defects and logic can be difficult to follow, debug or change. Fluent Conditions aims to help reduce the pain by providing a fluent syntax that helps express requirements in a readable syntax. 
+In many systems nested if-statements are a honey-pot of defects, to fix these defect the must be understood, but the logic can be difficult to follow, debug or change. Fluent Conditions aims to help reduce the pain by providing a fluent syntax that helps express requirements in a readable syntax. 
 
 
 
