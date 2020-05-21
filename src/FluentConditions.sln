@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentConditions", "FluentConditions\FluentConditions.csproj", "{D299EE10-6F61-47B1-987C-05227FF293DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentConditions.Tests", "FluentConditions.Tests\FluentConditions.Tests.csproj", "{421FA436-C147-442D-ADB5-3B58E5881AA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D299EE10-6F61-47B1-987C-05227FF293DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D299EE10-6F61-47B1-987C-05227FF293DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D299EE10-6F61-47B1-987C-05227FF293DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D299EE10-6F61-47B1-987C-05227FF293DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{421FA436-C147-442D-ADB5-3B58E5881AA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{421FA436-C147-442D-ADB5-3B58E5881AA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{421FA436-C147-442D-ADB5-3B58E5881AA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{421FA436-C147-442D-ADB5-3B58E5881AA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
