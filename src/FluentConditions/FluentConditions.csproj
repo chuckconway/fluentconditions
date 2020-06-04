@@ -2,6 +2,10 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <PackageVersion>0.50.1</PackageVersion>
+        <Title>Fluent Conditions</Title>
+        <Authors>Chuck Conway</Authors>
+        <Copyright>MIT</Copyright>
     </PropertyGroup>
 
 </Project>
